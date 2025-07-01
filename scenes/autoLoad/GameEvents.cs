@@ -20,6 +20,7 @@ public partial class GameEvents : Node2D
 		}
 	}
 	
+	
 	public static void EmitBuildingPlaced(BuildingComponent buildingComponent)
 	{
 		Instance?.EmitSignal(SignalName.BuildingPlaced, buildingComponent);

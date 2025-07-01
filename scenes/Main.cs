@@ -1,4 +1,3 @@
-using System;
 using Godot;
 using Grid.Manager;
 
@@ -12,6 +11,7 @@ public partial class Main : Node
 	private Vector2I? hoveredGridCell;
 	private GridManager gridManager;
 
+
 	public override void _Ready()
 	{
 		buildingScene = GD.Load<PackedScene>("res://scenes/Building/Building.tscn");
@@ -21,6 +21,7 @@ public partial class Main : Node
 		cursor.Visible = false;
 		placeBuildingButton.Pressed += OnButtonPressed;
 	}
+
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
@@ -41,6 +42,7 @@ public partial class Main : Node
 		}
 	}
 
+
 	public override void _UnhandledInput(InputEvent @evt)
 	{
 		if (
@@ -54,6 +56,7 @@ public partial class Main : Node
 			cursor.Visible = false;
 		}
 	}
+
 
 	private void PlaceBuildingAtHoveredCellPosition()
 	{

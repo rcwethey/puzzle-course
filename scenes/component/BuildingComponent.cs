@@ -14,9 +14,10 @@ public partial class BuildingComponent : Node2D
 		Callable.From(() => GameEvents.EmitBuildingPlaced(this)).CallDeferred();
 	}
 
+
 	public Vector2I GetGridCellPosition()
 	{
-        var gridPosition = (GlobalPosition / 64).Floor();
-        return new Vector2I((int)gridPosition.X, (int)gridPosition.Y);
+		var gridPosition = (GlobalPosition / 64).Floor();
+		return new Vector2I((int)gridPosition.X, (int)gridPosition.Y);
 	}
 }
