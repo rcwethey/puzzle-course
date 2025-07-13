@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://7pl58qw1ckfk"]
+[gd_scene load_steps=7 format=4 uid="uid://7pl58qw1ckfk"]
 
 [ext_resource type="Script" uid="uid://tv5qn3384qpi" path="res://scenes/Main.cs" id="1_elqb8"]
 [ext_resource type="TileSet" uid="uid://d1qxc0lrsv88c" path="res://resources/tiles.tres" id="2_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://857dtjq3h3yr" path="res://scenes/manager/GridManager.tscn" id="2_rarhs"]
 [ext_resource type="TileSet" uid="uid://ctcij5mupyhhw" path="res://resources/highlight_tileset.tres" id="2_rvslj"]
-[ext_resource type="PackedScene" uid="uid://c4m2gaf6wngti" path="res://scenes/Building/Building.tscn" id="5_c01mt"]
 [ext_resource type="PackedScene" uid="uid://g8q4pm8epehs" path="res://scenes/Building/base.tscn" id="5_vcsgt"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_elqb8"]
@@ -33,11 +32,9 @@ position = Vector2(3, 0)
 tile_map_data = PackedByteArray("AAALAAEAAgAAAAAAAAAMAAEAAgAAAAAAAAAMAAAAAgAAAAAAAAANAAEAAgAAAAAAAAAMAAIAAgAAAAAAAAALAAIAAgAAAAAAAAANAAIAAgAAAAAAAAAMAAMAAgAAAAAAAAANAAMAAgAAAAAAAAAPAAQAAgAAAAAAAAARAAUAAgAAAAAAAAAQAAQAAgAAAAAAAAARAAQAAgAAAAAAAAAQAAMAAgAAAAAAAAARAAMAAgAAAAAAAAARAAYAAgAAAAAAAAAQAAYAAgAAAAAAAAAQAAcAAgAAAAAAAAARAAcAAgAAAAAAAAASAAcAAgAAAAAAAAALAAQAAgAAAAAAAAAMAAQAAgAAAAAAAAABAAUAAgAAAAAAAAA=")
 tile_set = ExtResource("2_0bbpv")
 
-[node name="Building" parent="YSortRoute" instance=ExtResource("5_c01mt")]
-
-[node name="Base" parent="YSortRoute" instance=ExtResource("5_vcsgt")]
-y_sort_enabled = true
-position = Vector2(384, 256)
+[node name="Base" parent="." instance=ExtResource("5_vcsgt")]
+modulate = Color(0.4, 1, 1, 1)
+position = Vector2(512, 256)
 
 [node name="HighlightTileMapLayer" type="TileMapLayer" parent="."]
 top_level = true
